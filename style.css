@@ -1,0 +1,80 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Changed to a modern, elegant font */
+    background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+    background: #fff;
+    margin: 15px 0;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.timer {
+    font-size: 2.5em;
+    color: #f76c6c; /* Bright color for attention */
+    margin: 15px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c5ce7;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #341f97;
+    transform: scale(1.05);
+}
+
+.log-button {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    background-color: #00b894;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.log-button:hover {
+    background-color: #019874;
+    transform: scale(1.05);
+}

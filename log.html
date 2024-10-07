@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Log for Today</h1>
+        <div id="log"></div>
+        <a href="index.html" class="log-button">Back to Tasks</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let today = new Date().toLocaleDateString();
+            let log = JSON.parse(localStorage.getItem(today)) || {};
+            const logDiv = document.getElementById('log');
+
+            if (Object.keys(log).length === 0) {
+                logDiv.innerHTML = "<p>No tasks tracked for today.</p>";
+            } else {
+                Object.keys(log).forEach(task => {
+                    logDiv.innerHTML += `<h2>${task}</h2><p>Time Spent: ${formatTime(log[task])}</p>`;
+                });
+            }
+        });
+
+        function formatTime(seconds) {
+            const hrs = Math.floor(seconds / 3600);
+            const mins = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+    </script>
+</body>
+</html>

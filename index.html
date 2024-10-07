@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Tracker</h1>
+        <div id="task-list">
+            <div class="task" data-task="Reading">
+                <h2>Reading</h2>
+                <div class="timer" id="timer-reading">00:00:00</div>
+                <button onclick="startTask('Reading')">Start</button>
+                <button onclick="stopTask('Reading')">Stop</button>
+            </div>
+            <div class="task" data-task="Study">
+                <h2>Study</h2>
+                <div class="timer" id="timer-study">00:00:00</div>
+                <button onclick="startTask('Study')">Start</button>
+                <button onclick="stopTask('Study')">Stop</button>
+            </div>
+            <div class="task" data-task="Exercise">
+                <h2>Exercise</h2>
+                <div class="timer" id="timer-exercise">00:00:00</div>
+                <button onclick="startTask('Exercise')">Start</button>
+                <button onclick="stopTask('Exercise')">Stop</button>
+            </div>
+        </div>
+        <a href="log.html" class="log-button">View Daily Log</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
